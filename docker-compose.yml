@@ -1,0 +1,11 @@
+version: '1.0'
+services:
+  api: 
+    image: cacheapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${EXTERNAL_PORT}:${PORT}
+    env_file:
+      - .env
