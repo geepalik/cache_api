@@ -3,9 +3,14 @@ import {validationResult} from "express-validator";
 
 const runValidation = (req: Request, res: Response, next: NextFunction) =>{
     const errors = validationResult(req);
-    if(!errors.isEmpty() && errors.array().length === 1){
+    if(!errors.isEmpty()){
+        const outputMessages: any[] = [];
+            errors.array()
+                .filter(errorMessage => errorMessage.msg !== "Invalid value")
+                .forEach(errorMessage => outputMessages.push(errorMessage.msg));
+        
         return res.status(422).json({
-            message: errors.array()[0].msg
+            message: outputMessages
         });
     }
     next();

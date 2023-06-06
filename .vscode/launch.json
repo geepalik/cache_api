@@ -1,0 +1,22 @@
+{
+    "version": "0.5.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Cache API",
+            "program": "${workspaceFolder}/src/index.ts",
+            "env": {"NODE_ENV": "development", "NODE_CONFIG_DIR": "${workspaceFolder}"},
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "preLaunchTask": "npm: build",
+            "sourceMaps": true,
+            "smartStep": true,
+            "internalConsoleOptions": "openOnSessionStart",
+            "outFiles": [ "${workspaceFolder}/out/**/*.js" ],
+            "outputCapture": "std",
+        },
+    ]
+  }

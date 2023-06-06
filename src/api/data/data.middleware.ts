@@ -16,11 +16,11 @@ const setKeyValidator = [
         .not()
         .isEmpty()
         .withMessage('Value is required'),
-    check('hour')
+    check('hours')
         .not()
         .isEmpty()
         .isNumeric()
-        .withMessage('Hour is required'),
+        .withMessage('Hours is required'),
     check('minutes')
         .not()
         .isEmpty()

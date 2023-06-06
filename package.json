@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,7 +15,8 @@
     "body-parser": "^1.20.2",
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
-    "express-validator": "^7.0.1"
+    "express-validator": "^7.0.1",
+    "moment": "^2.29.4"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.2",
