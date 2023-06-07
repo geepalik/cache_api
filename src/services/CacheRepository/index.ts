@@ -17,7 +17,6 @@ export class CacheRepository{
         const currentTime = moment().format();
         const cacheItem: CacheItem = {
             value,
-            createdOn: currentTime,
             expiresOn: this.calculateExpireTime(currentTime, ttl)
         }
         this.repository.set(key, cacheItem);
